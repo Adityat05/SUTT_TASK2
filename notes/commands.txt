@@ -1,0 +1,12 @@
+going into the virtual env- source tutorial-env/bin/activate
+interact with the database using python- python3 manage.py shell
+create question- q=Question(question_text="how old are you",pub_date=timezone.now()) then q.save()
+create choice- q.choice_set.create(choice_text="10-15",votes=0)
+get question set- Question.objects.all()
+filter them = Question.objects.filter(condition)
+	filter will return a query set (set of all questions matching condiition to access the individual question you need to do q=Question.objects.filter(pk=1).first())
+get one question which matches the description- Question.obejcts.get(condition) we can use this directly
+
+run server- python3 manage.py runserver
+
+
